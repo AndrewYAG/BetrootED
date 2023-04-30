@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!" +
-                "What's up, buddy?");
+                "\nWhat's up, buddy?\nWanna have a drink?\nYep!");
         }
     }
 }

@@ -17,6 +17,10 @@ namespace ClassIntroHW
             Array.Resize<Client>(ref takenByClients, takenByClients.Length + 1);
             takenByClients[^1] = client;
         }
+        public bool IsAvailableToTake()
+        {
+            return NumOfCopies - takenByClients.Length > 0 ? true : false;
+        }
         public void ShowTakenBy()
         {
             foreach (Client client in takenByClients)

@@ -19,5 +19,10 @@
                 Console.WriteLine(book);
             }
         }
+        public void AddEmployee(Employee employee)
+        {
+            Array.Resize<Employee>(ref employees, employees.Length + 1);
+            employees[^1] = employee;
+        }
     }
 }

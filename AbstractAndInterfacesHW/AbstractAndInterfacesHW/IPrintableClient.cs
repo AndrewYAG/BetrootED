@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace AbstractAndInterfacesHW
 {
-    public interface IRenewable
+    public interface IPrintableClient
     {
-        void RenewProductAmountInStock(int amountToRenew);
+        void PrintPurchasedProducts();
+
+        void PrintReceipts();
     }
 }

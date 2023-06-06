@@ -1,6 +1,6 @@
 ﻿namespace AbstractAndInterfacesHW
 {
-    public class Client : Person
+    public class Client : Person, IPrintableClient
     {
         private Product[] _basketOfProductsToBuy = new Product[0];
         private Product[] _listOfPurchasedProducts = new Product[0];

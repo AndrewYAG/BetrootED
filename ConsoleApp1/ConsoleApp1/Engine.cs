@@ -3,7 +3,14 @@
     public class Engine : CarElement
     {
         public string Model { get; set; }
-        public float Size { get; set; }
+        public double Size { get; set; }
+
+        public Engine(string name, string description, decimal price, int amountInStock, string model, double size)
+            : base(name, description, price, amountInStock)
+        {
+            Model = model;
+            Size = size;
+        }
 
         public override string ToString()
         {

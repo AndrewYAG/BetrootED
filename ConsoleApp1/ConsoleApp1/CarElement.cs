@@ -7,6 +7,14 @@
         public decimal Price { get; set; }
         public int AmountInStock { get; set; }
 
+        public CarElement(string name, string description, decimal price, int amountInStock)
+        {
+            Name = name;
+            Description = description;
+            Price = price;
+            AmountInStock = amountInStock;
+        }
+
         public override string ToString()
         {
             return $"This is {this.GetType}. Name: {Name}, Price: {Price}$, Amount in stock is: {AmountInStock}." +

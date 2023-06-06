@@ -7,6 +7,13 @@ namespace ClassIntroHW
         public Book[] takenBooks = new Book[0];
         public int DebtInDollars { get; set; }
 
+        public Client(string firstName, string lastName, int age, DateTime birthDate, string address, string phoneNum,
+            Book[] takenBooks, int debtInDollars) : base(firstName, lastName, age, birthDate, address, phoneNum)
+        {
+            this.takenBooks = takenBooks;
+            DebtInDollars = debtInDollars;
+        }
+
         public void TakeBook(Book book)
         {
             Array.Resize<Book>(ref takenBooks, takenBooks.Length + 1);

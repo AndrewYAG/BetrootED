@@ -7,6 +7,18 @@
         public string Title { get; set; }
         public string Location { get; set; }
 
+        public Library(string title, string location)
+        {
+            Title = title;
+            Location = location;
+        }
+
+        public Library(Book[] books, Employee[] employees, string title, string location) : this(title, location)
+        {
+            this.books = books;
+            this.employees = employees;
+        }
+
         public void AddBook(Book book)
         {
             Array.Resize<Book>(ref books, books.Length + 1);

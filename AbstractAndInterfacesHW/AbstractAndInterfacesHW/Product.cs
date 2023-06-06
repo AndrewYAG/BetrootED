@@ -1,6 +1,6 @@
 ﻿namespace AbstractAndInterfacesHW
 {
-    public class Product : IRenewable
+    public class Product : IRenewableAndSellable
     {
         public string Title { get; private set; }
         public string Producer { get; private set; }

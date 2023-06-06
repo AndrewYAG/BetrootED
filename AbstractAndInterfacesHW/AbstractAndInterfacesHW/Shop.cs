@@ -1,6 +1,6 @@
 ﻿namespace AbstractAndInterfacesHW
 {
-    public class Shop : IProductable, IClientable
+    public class Shop : IProductable, IClientable, IEmployable, IPrintableClientInfo
     {
         protected Employee[] _listOfEmployees = new Employee[0];
         protected Product[] _products = new Product[0];

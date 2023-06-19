@@ -39,6 +39,9 @@ namespace GenericsHW
 
         public T Peek()
         {
+            if (head is null)
+                throw new StackOverflowException("Stack is empty!");
+
             return head.Value;
         }
 

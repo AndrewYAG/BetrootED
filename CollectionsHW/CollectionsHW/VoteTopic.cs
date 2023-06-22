@@ -28,6 +28,9 @@
 
         public void AddVoteOption(string newVoteVariantTitle)
         {
+            if (String.IsNullOrWhiteSpace(newVoteVariantTitle))
+                throw new ArgumentException("New vote option is null, empty or whitespace. It must contain a value!");
+
             int nextKey = VoteList.Count + 1;
             VoteList.Add(nextKey, new Vote(newVoteVariantTitle));
         }
@@ -47,13 +50,20 @@
             Console.WriteLine("\nVote results:");
             foreach (var voteVariant in VoteList)
             {
-                Console.WriteLine($"№{voteVariant.Key} -- " + voteVariant.Value.Title + 
+                Console.WriteLine($"№{voteVariant.Key} -- " + voteVariant.Value.Title +
                     $" [{voteVariant.Value.NumOfVotes} Votes]");
             }
         }
 
-        public void MakeVote(int numOfVoteOptionToVote) => VoteList[numOfVoteOptionToVote].IncreaseNumOfVotesByOne();
+        public void MakeVote(int numOfVoteOptionToVote)
+        {
 
+            if (numOfVoteOptionToVote <= 0 || numOfVoteOptionToVote > (VoteList.Count))
+                throw new ArgumentException("Invalid num of vote topic to vote for. " +
+                    $"It must be in range [0; {VoteList.Count}]");
+
+            VoteList[numOfVoteOptionToVote].IncreaseNumOfVotesByOne();
+        }
         public void ChangeTitle(string newTitle) => Title = newTitle;
     }
 }

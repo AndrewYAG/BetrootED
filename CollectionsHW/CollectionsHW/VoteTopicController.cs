@@ -22,11 +22,14 @@ namespace CollectionsHW
                         Console.Write("Enter vote num to vote for: ");
                         int numOfTopic = int.Parse(Console.ReadLine());
 
-                        if (numOfTopic <= 0 || numOfTopic > (vote.VoteList.Count))
-                            throw new ArgumentException("Invalid num of vote topic to vote for. " +
-                                $"It must be in range [0; {vote.VoteList.Count + 1}]");
-
-                        vote.MakeVote(numOfTopic);
+                        try
+                        {
+                            vote.MakeVote(numOfTopic);
+                        }
+                        catch(ArgumentException ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                         break;
 
                     case ConsoleKey.D2:
@@ -39,17 +42,21 @@ namespace CollectionsHW
                         Console.Write("Enter vote option to add: ");
                         var newOption = Console.ReadLine();
 
-                        if (String.IsNullOrWhiteSpace(newOption))
-                            throw new ArgumentException("New vote option is null, empty or whitespace. It must contain a value!");
-
+                        try
+                        {
                         vote.AddVoteOption(newOption);
+                        }
+                        catch(ArgumentException ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                         break;
 
                     case ConsoleKey.D4:
                         return;
 
-                        default: 
-                        throw new ArgumentException($"You pressed wrong button. It must be in range 1-4!");
+                    default:
+                        throw new ArgumentOutOfRangeException($"You pressed wrong button. It must be in range 1-4!");
                 }
 
                 Console.WriteLine("Press any key to continue...");

@@ -3,7 +3,7 @@ using LinkControlHW.Domain;
 
 namespace LinkControlHW
 {
-    internal class AddRoomController : IController
+    public class AddRoomController : IController
     {
         const int MaximumRoomLength = 50;
 
@@ -19,7 +19,7 @@ namespace LinkControlHW
             var nextController = new MenuItemController();
 
 
-            Console.WriteLine("Enter room name:");
+            /*Console.WriteLine("Enter room name:");
             string roomName = Console.ReadLine();
             if (string.IsNullOrEmpty(roomName))
             {
@@ -40,7 +40,7 @@ namespace LinkControlHW
 
             var room = new Room(roomName, primaryKey);
 
-            _repository.AddRoom(room);
+            _repository.AddRoom(room);*/
             return nextController;
         }
     }

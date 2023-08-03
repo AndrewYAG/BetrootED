@@ -14,16 +14,19 @@ namespace LinkControlHW
 
         private IRepository _repository;
 
-        public AddMeetingController()
+        public AddMeetingController(IRepository repository = null)
         {
-            _repository = Factory.GetRepository();
+            if (repository == null)
+                _repository = Factory.GetRepository();
+            else
+                _repository = repository;
         }
 
         public IController ExecuteAction()
         {
             var nextController = new MenuItemController();
 
-            Console.WriteLine("\nEnter Start Date:");
+            /*Console.WriteLine("\nEnter Start Date:");
             bool dateParsingResult = DateTime.TryParse(Console.ReadLine(), out var startTime);
             if (!dateParsingResult)
             {
@@ -51,7 +54,7 @@ namespace LinkControlHW
             }
 
             Console.WriteLine("Enter existing room id:");
-            int idOfMeetingRoom = int.TryParse(Console.ReadLine(), out var roomId) ? roomId : 
+            int idOfMeetingRoom = int.TryParse(Console.ReadLine(), out var roomId) ? roomId :
                 throw new NotImplementedException("Incorrect room Id!");
 
             string meetingName = "";
@@ -93,7 +96,7 @@ namespace LinkControlHW
 
             var meeting = new Meeting(primaryKey, name, startTime, duration, new Room(meetingName, meetingId));
 
-            _repository.AddMeeting(meeting);
+            _repository.AddMeeting(meeting);*/
             return nextController;
         }
 

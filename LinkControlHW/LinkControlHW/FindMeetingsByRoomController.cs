@@ -15,7 +15,7 @@ namespace LinkControlHW
         public IController ExecuteAction()
         {
             var meetings = _repository.GetAllMeetings();
-            FindMeetingsByRoom(meetings);
+            //FindMeetingsByRoom(meetings);
 
             return new MenuItemController();
         }

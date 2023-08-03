@@ -21,7 +21,7 @@ namespace LinkControlHW
         {
             var rooms = _repository.GetAllRooms();
 
-            ShowAllRooms(rooms);
+            //ShowAllRooms(rooms);
 
             return new MenuItemController();
         }
@@ -29,7 +29,7 @@ namespace LinkControlHW
         private static void ShowAllRooms(Room[] rooms)
         {
             /*if (rooms.Length == 0)
-                throw new NotImplementedException("Error! File is empty yet! Firstly add a meeting!");*/
+                throw new NotImplementedException("Error! File is empty yet! Firstly add a room!");*/
 
             Console.WriteLine($"\n{"RoomId",20}"
                 + $"{"Name",20}");

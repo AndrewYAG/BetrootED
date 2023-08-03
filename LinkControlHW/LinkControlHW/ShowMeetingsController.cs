@@ -21,7 +21,7 @@ namespace LinkControlHW
         {
             var meetings = _repository.GetAllMeetings();
 
-            ShowAllMeetings(meetings);
+            //ShowAllMeetings(meetings);
 
             return new MenuItemController();
         }

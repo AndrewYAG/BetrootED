@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    color: #292929;
+}
+
+body {
+    background-color: #ddd;
+}
+
+.about_myself {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.about_myself_header {
+    background-color: gray;
+}
+
+    .about_myself_header h2 {
+        color: #ddd;
+        padding: 20px 0px;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 26px;
+    }
+
+.content {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-around;
+    background-color: darkorange;
+}
+
+.content_photo_and_skills {
+    width: 25%;
+}
+
+
+.photo {
+    width: 100%;
+    border: solid #292929 2px;
+    box-sizing: border-box;
+}
+
+.photo_text {
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 20px;
+    border: solid #292929 2px;
+    border-top: none;
+    box-sizing: border-box;
+}
+
+.content_text {
+    width: 60%;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.content_about_education_text {
+    margin-bottom: 20px
+}
+
+.skills_list {
+    padding: 15px 30px;
+}
+
+.skills_header {
+    padding-bottom: 5px;
+}
+
+.skills_list li {
+    margin-bottom: 5px;
+}
+
+.skill_button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skillsContainer {
+    display: none;
+}
+
+#showSkillsButton {
+    background-color: cornflowerblue;
+    padding: 5px 0px;
+    border-radius: 15px;
+    width: 90px;
+}
+
+#changeBackgroundColorButton {
+    background-color: aquamarine;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border-color: yellowgreen;
+    margin-bottom: 10px;
+}

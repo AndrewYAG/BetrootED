@@ -77,3 +77,28 @@ body {
 .skills_list li {
     margin-bottom: 5px;
 }
+
+.skill_button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skillsContainer {
+    display: none;
+}
+
+#showSkillsButton {
+    background-color: cornflowerblue;
+    padding: 5px 0px;
+    border-radius: 15px;
+    width: 90px;
+}
+
+#changeBackgroundColorButton {
+    background-color: aquamarine;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border-color: yellowgreen;
+    margin-bottom: 10px;
+}

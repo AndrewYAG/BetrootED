@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
+body {
+    background-color: darkslateblue;
+    font-size: 14px;
+}
+
+.form_section {
+    padding: 40px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    padding: 25px 20px;
+    border: 2px solid whitesmoke;
+    background-color: #292929;
+    color: whitesmoke;
+    border-radius: 30px;
+}
+
+input, label {
+    display: block;
+}
+
+    input[type="radio"] {
+        display: inline;
+        margin: 0;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+.delivery_method_div label {
+    display: inline;
+}
+
+form input {
+    margin-bottom: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    height: 25px;
+    padding: 0px 8px;
+}
+
+form textarea {
+    margin-bottom: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.form_fields {
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.form_sumbit_button {
+    border-radius: 15px;
+    height: 30px;
+    width: 95px;
+    margin-top: 5px;
+    background-color: whitesmoke;
+}
+
+.form_sumbit_button_div {
+    display: flex;
+    justify-content: center;
+}
+
+#ask_question_button {
+    width: 110px;
+}
+
+#ask_question_area {
+    padding: 5px 10px;
+    resize: none;
+}
+
+.delivery_method_div_text {
+    margin-bottom: 5px;
+}

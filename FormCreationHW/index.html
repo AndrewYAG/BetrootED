@@ -1,0 +1,124 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Beetroot About Myself HW</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <section class="registration_form_section form_section">
+
+        <form id="registration_form">
+
+            <h3>Fill following data to create an account</h3><br />
+
+            <div class="form_fields">
+                <div>
+                    <label for="registration_login">Login:</label>
+                    <input type="text" id="registration_login" placeholder="Enter your login" required />
+
+                    <label for="registration_password">Password:</label>
+                    <input type="password" id="registration_password" placeholder="Enter your password" required />
+
+                    <label for="confirm_registration_password">Confirm Password:</label>
+                    <input type="password" id="confirm_registration_password" placeholder="Confirm your password" required />
+
+                    <label for="registration_email">Email:</label>
+                    <input type="email" id="registration_email" placeholder="Enter your Email" required />
+
+                    <label for="registration_dateOfBirth">Date Of Birth:</label>
+                    <input type="date" id="registration_dateOfBirth" required />
+                </div>
+            </div>
+
+            <div class="form_sumbit_button_div">
+                <input type="submit" id="registration_button" class="form_sumbit_button" value="Registrate" />
+            </div>
+        </form>
+    </section>
+
+    <section class="login_form_section form_section">
+
+        <form id="login_form">
+
+            <h3>Enter following data in order to login</h3><br />
+
+            <div class="form_fields">
+                <div>
+                    <label for="login_login">Login:</label>
+                    <input type="text" id="login_login" placeholder="Enter your login" required />
+
+                    <label for="login_password">Password:</label>
+                    <input type="password" id="login_password" placeholder="Enter your password" required />
+
+                </div>
+            </div>
+
+            <div class="form_sumbit_button_div">
+                <input type="submit" id="login_button" class="form_sumbit_button" value="Login" />
+            </div>
+        </form>
+    </section>
+
+    <section class="ask_question_form_section form_section">
+
+        <form id="ask_question_form">
+
+            <h3>Ask a question?</h3><br />
+
+            <div class="form_fields">
+                <div>
+                    <label for="ask_question_name">Your Name:</label>
+                    <input type="text" id="ask_question_name" placeholder="Enter your name" required />
+
+                    <label for="ask_question_email">Email:</label>
+                    <input type="email" id="ask_question_email" placeholder="Enter your Email" required />
+
+                    <label for="ask_question_area">Question:</label>
+                    <textarea id="ask_question_area" required rows="3" cols="40"></textarea>
+                </div>
+            </div>
+            <div class="form_sumbit_button_div">
+                <input type="submit" id="ask_question_button" class="form_sumbit_button" value="Ask a question" />
+            </div>
+        </form>
+    </section>
+
+    <section class="make_order_form_section form_section">
+
+        <form id="make_order_form_">
+
+            <h3>Make an Order</h3><br />
+
+            <div class="form_fields">
+                <div>
+                    <label for="make_order_name">Your Name:</label>
+                    <input type="text" id="make_order_name" placeholder="Enter your full name" required />
+
+
+                    <label for="make_order_city">Your City:</label>
+                    <input type="text" id="make_order_city" placeholder="Enter your city name" required />
+
+                    <label for="make_order_address">Your Address:</label>
+                    <input type="text" id="make_order_address" placeholder="Enter your address" required />
+
+                    <div class="delivery_method_div">
+                        <p class="delivery_method_div_text">Delivery Method:</p>
+
+                        <input type="radio" id="make_order_delivery_newPost" name="make_order_delivery" value="NewPost" required/>
+                        <label for="make_order_delivery_newPost">New Poshta</label>
+                        <br />
+                        <input type="radio" id="make_order_delivery_ukrPost" name="make_order_delivery" value="UkrPost" required/>
+                        <label for="make_order_delivery_ukrPost">Ukr Poshta</label>
+                        <br />
+                        <input type="radio" id="make_order_delivery_courier" name="make_order_delivery" value="Courier" required/>
+                        <label for="make_order_delivery_courier">Courier</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form_sumbit_button_div">
+                <input type="submit" id="ask_question_button" class="form_sumbit_button" value="Ask a question" />
+            </div>
+        </form>
+    </section>
+</body>
+</html>

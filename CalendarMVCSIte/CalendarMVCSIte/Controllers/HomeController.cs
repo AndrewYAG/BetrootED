@@ -1,4 +1,5 @@
 ﻿using CalendarMVCSIte.Models;
+using DatabaseLayer;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,15 +8,23 @@ namespace CalendarMVCSIte.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly CalendarDbContext _calendar;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, CalendarDbContext calendar)
         {
             _logger = logger;
+            _calendar = calendar;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var model = new IndexViewModel();
+
+            var meetings = _calendar.Meetings.ToList();
+
+            model.Meetings = meetings;
+
+            return View(model);
         }
 
         public IActionResult Privacy()
